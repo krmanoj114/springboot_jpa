@@ -1,0 +1,37 @@
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html
+http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html 
+http://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/policy_creating.html
+http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/AlarmThatSendsEmail.html 
+https://aws.amazon.com/cloudwatch/details/#other-aws-resource-monitoring 
+https://aws.amazon.com/blogs/aws/new-cloudwatch-events-track-and-respond-to-changes-to-your-aws-resources/
+https://aws.amazon.com/elasticloadbalancing/details/
+https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html
+https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html
+AWS SDKs: https://aws.amazon.com/tools/#SDKs
+ELB API Reference: http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/Welcome.html
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html
+http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.html
+http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_BestPractices.html
+http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html
+http://aws.amazon.com/security/
+https://aws.amazon.com/premiumsupport/ 
+http://d0.awsstatic.com/whitepapers/Security/Intro_to_AWS_Security.pdf 
+https://d0.awsstatic.com/whitepapers/aws-security-whitepaper.pdf
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
+http://aws.amazon.com/ebs/pricing/
+AWS Simple Monthly Calculator - http://calculator.s3.amazonaws.com/index.html
+http://aws.amazon.com/solutions/case-studies/dropcam/
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html
+https://aws.amazon.com/s3/storage-classes/
+https://aws.amazon.com/devpay/
+http://docs.aws.amazon.com/AmazonS3/latest/dev/S3TorrentPublish.html 
+http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
+http://aws.amazon.com/s3/
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html
+ https://aws.amazon.com/ec2/instance-types/
+ https://infrastructure.aws/
+ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
+ https://aws.amazon.com/about-aws/global-infrastructure/
+ what kind of technical support (consulting) that we get from AWS if i want to move away from AWS Cloud to on premises ?
+ 

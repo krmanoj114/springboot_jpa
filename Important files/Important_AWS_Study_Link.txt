@@ -1,0 +1,16 @@
+AWS
+===
+https://aws.amazon.com/lambda/
+https://aws.amazon.com/products/compute/?nc2=h_ql_prod_cp
+https://aws.amazon.com/products/databases/
+https://aws.amazon.com/elasticloadbalancing/
+https://aws.amazon.com/products/security/
+https://aws.amazon.com/compliance/shared-responsibility-model/
+https://aws.amazon.com/rds/features/
+https://aws.amazon.com/rds/faqs/
+https://aws.amazon.com/blogs/database/best-storage-practices-for-running-production-workloads-on-hosted-databases-with-amazon-rds-or-amazon-ec2/
+
+
+https://www.youtube.com/watch?v=XrWII4ewrXA
+https://aws.amazon.com/partners/training/?nc2=sb_pt_pto
+https://partnercentral.awspartner.com/APNLogin?startURL=%2FLmsSsoRedirect%3FRelayState%3D%252Flearningobject%252Fcurriculum%253Fid%253D45423

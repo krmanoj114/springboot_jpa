@@ -1,0 +1,100 @@
+Java Brain
+
+Github link - https://github.com/koushikkothagal/spring-boot-security
+			  https://github.com/koushikkothagal/spring-security-jwt
+
+https://jwt.io/
+https://cryptii.com/
+
+git hub personal token - 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
+
+----------
+
+5 Core concept of Spring Security
+--------------------------------
+1> Authentication  - who are you with proof of identity, by providing the id/password, there are two type of autentication 
+	1> Knowledge Based Authentication 
+	2>Possession Based Authentication
+	3>Multifactor Authentication (combination of Knowledge base Auth + Posession based Auth)
+
+2> Authorization - Autherization is a process of determing that what all action a user is allowed to perform. Befor Autherization, authentication must be performed.
+
+3> Principal   - Principal is a currently logged in user. principal get generated after sucessful authentication.
+
+4> Granted Authority - Is the permisstion to user to allow to perform certain activities. A user is trying to do some activity is only allowed if user has Granted Authority
+
+5> Roles
+
+Craete database springsecurity;
+
+create table user(
+	id varchar(50) not null,
+	active boolean DEFAULT FALSE,
+	password varchar(500) not null,
+	roles varchar(50) not null,
+    username varchar(50) not null primary key  
+   ) ;
+ 
+INSERT into user (id, active, password, roles, username) values (1, 'TRUE', 'pass', 'ROLE_USER', 'user');
+
+=====================================
+
+LDAP configuration
+
+https://spring.io/guides/gs/authenticating-ldap/
+
+===================================
+
+Token
+-----
+Token comes in picture when authentication is dine, its uesed for subsequent interaction for authorization and not for authentication.
+
+Session Token -  On sucessful autentication a session id gets created on sever and sessionId send to customer as part of response, sessionid gets stored as cookies in client browser and send in subsequest request to server in request header. Server identify the customer based on sessionId. This approach work well with one to one client-server senerios, In case of multiple server or in moderen web application this doesn't work well. Session toten is refered as reference token.
+
+JWT - Json Web Token - This modern implemention of modern web application where sessionId information is being shared between client and server in Json format. In this approach server need not to rember sessionId. Client sends Json Web Token with each subsequent request. This approach is reffered as value token.
+
+======================================================================
+OAuth2.0 
+--------
+OAuth is used for authenticaton/authorization betweem two services or applications
+
+Resource - Protected things
+
+Resource Owner - is the person whon is the owner of resource and who can provide permission to access the resource 
+(An entity capable of granting access to a protected resource)
+
+Resource Server - The server who hold the protected resource
+
+Client - is an application which need access to protected resource on behalf of resource owner
+
+Authorization Server - The server issueing access token to the client, It can associate with resource server or stand alone
+
+Flow:-
+1>Authorization Code Flow:- More secured
+			In this flow 
+			1> user logged into service application to get the job done
+			2> Client (Service application) tries to access the resource, it redirected to authorization server to get the access for resource,
+			3> Authuorization server goes to resource owner to gets the approval from resource owner on what type of resource need to be access by client,
+			4> on getting the permission from resource owner authorization server provide the short lived auth token to client.
+			5> Client uses/send the auth toten to authorization server again to get the access token,
+			6> On validating the auth token authorization server provides access toten to client. 
+			7> Client than use access token to access the resource.
+			8> Resourse server gets te access token validated by Authorization server, if access token is valid than client allowd th perform task
+
+2. Implicit Flow:-Less secured
+			In this flow 
+			1> user logged into service application to get the job done
+			2> Client (Service application) tries to access the resource, it redirected to authorization server to get the access for resource,
+			3> Authuorization server goes to resource owner to gets the approval from resource owner on what type of resource need to be access by client,
+			4> on getting the permission from resource owner authorization server provides the access token
+			5> Client than use access token to access the resource.
+			6> Resourse server gets te access token validated by Authorization server, if access token is valid than client allowd th perform task
+
+
+
+
+
+
+
+
+

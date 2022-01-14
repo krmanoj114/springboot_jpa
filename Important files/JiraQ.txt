@@ -1,0 +1,25 @@
+project in (MSCND, DSCIAD) AND issuetype in (Defect, Demand, Task, Sub-task) AND status not in (Closed, Done) AND cf[11101] in (197) AND cf[11101] in (197) AND assignee is EMPTY ORDER BY updatedDate DESC,
+
+
+
+"vchaurishi@sapient.com", 
+
+assignee = currentUser() AND resolution = Unresolved order by updated DESC
+
+
+
+
+project = DSCIAD AND issuetype in (Defect, Demand, Task, Sub-task) AND status not in (Closed, Done) AND assignee in ("atiwari34@sapient.com", "mkhan18@sapient.com", "vchaurishi@sapient.com", "mlund2@sapient.com", "asood6@sapient.com", "slal@sapient.com", "dyash@sapient.com", "nestleciamindiatech@sapient.com", "manik.batra@sapient.com") AND assignee was in ("nestleciamindiatech@sapient.com") ORDER BY updatedDate DESC
+
+
+
+
+Final
+=====
+
+project in (MSCND, DSCIAD) AND issuetype in (Defect, Demand, Task, Sub-task) AND status not in (Closed, Done) AND (assignee in ("vchaurishi@sapient.com", "mlund2@sapient.com", "asood6@sapient.com", "manoj.kumar11@publicissapient.com", "siddharth.chona@publicissapient.com", "csharma4@sapient.com", "manish.lund@publicissapient.com",  "pankaj.kamran@publicissapient.com", "shivali.chandra@publicissapient.com", "archit.jain@publicissapient.com", "vidushi.chaurishi@publicissapient.com", "lucky.ponia@publicissapient.com", "pallavi.garg@publicissapient.com", "bharti.singla@publicissapient.com") OR cf[11101] in (197) AND assignee is EMPTY AND createdDate >= "2021/02/02") AND updated < -4d AND
+ summary !~ meeting AND
+ summary !~ "Pre Go-live Checklist" AND
+ summary !~ "Handover to Support" AND
+ summary !~ Hyper-care AND
+ summary !~ Go-live   ORDER BY assignee ASC

@@ -1,0 +1,16 @@
+if (event.screen === 'gigya-subscribe-thank-you-screen'){
+   document.getElementById("OK").onclick = function() {
+  window.location.href = "https://www.google.com";
+};
+}
+
+
+if (event.screen === 'gigya-register-screen'){
+   document.getElementById("Submit").onclick = function() {
+  window.location.href = "https://www.google.com";
+};
+}
+
+
+
+	

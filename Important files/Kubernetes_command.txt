@@ -1,0 +1,17 @@
+
+
+Kubernetes Commands
+-------------------
+minikube version
+
+minikube start
+
+kubectl version
+
+kubectl cluster-info
+
+kubectl get nodes
+
+====================================
+Using kubectl to Create a Deployment
+====================================

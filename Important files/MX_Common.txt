@@ -1,0 +1,179 @@
+
+
+MX_Common
+---------
+
+SELECT count(*) FROM emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL  
+-- 1688919
+
+SELECT count(*) FROM emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.initialAppSourceCode = regex("MX.*_MI.*") 
+
+-- 1271371
+
+SELECT count(*) FROM emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL  AND  data.initialAppSourceCode = regex("MX.*_MI.*")  AND lastUpdated >= "2019-06-22T00:00:00.000Z" AND  lastUpdated < "2021-01-22T23:59:59.000Z" LIMIT 200
+--1257437
+
+
+Please let me elaborate, above timeframe mentioned in table says that initial data load from CIAM>CDM  (taking an example of AU)  started on "2020-12-06" and continued till 2020-12-16. This endDate is just reference purpose to pass the lastUpdated date as timestamp.
+
+So for AU we need to capture any consumer which is migrated consumer and has lastUpdated >"2020-12-16T00:00:00.000Z". The same way for other market.
+
+011-42564776
+
+
+MX MIG
+------
+select  count(*) from emailAccounts where (data.marketCode is null OR data.consumerType is null) --6
+select  count(*) from emailAccounts where (hasLiteAccount = true AND hasFullAccount = false)  AND (data.marketCode is null  OR data.consumerType is null) --0
+
+select  count(*) from emailAccounts where (hasLiteAccount = true AND hasFullAccount = false)  -- 532263
+select  count(*) from emailAccounts where (hasLiteAccount = true AND hasFullAccount = false)  AND (data.marketCode is null  OR data.consumerType is null)  --0
+
+select  count(*) from emailAccounts where (hasLiteAccount = false AND hasFullAccount = true)  AND (data.marketCode is null  OR data.consumerType is null) --6
+
+
+
+MX STAG
+-------
+
+
+select  count(*) from emailAccounts where (hasLiteAccount = true AND hasFullAccount = false)  AND (data.marketCode is null  )  LIMIT 70 --8 --
+
+"UID": "d3fcc763987743a5bcf7392ba903a124","2f7b6e9733bc4c11b52298a6bd73a6fa","217035de13054067a72cfabf88575e52","53dad66ad0064a2bae9fba0698f2befa","f445897695f740418fad120c06ebb40a","b86ed7e2e65947e09f7b9fa6add5fb0c","b5ce7f6b8130402b982c580041dbc1fa","21ca89311e4a4519a8c0ae1ec5ecf719"
+ 
+
+select  count(*) from emailAccounts where (hasLiteAccount = true AND hasFullAccount = false)  AND (data.consumerType is null  )  LIMIT 70  --68
+
+
+
+select  count(*) from emailAccounts where (hasLiteAccount = true AND hasFullAccount = false)  AND (data.marketCode is null  OR data.consumerType is null)  -68
+
+"UID": "38fcfba5770b4f869bd00fda776c5b8f","75b9fa034b014fcaa103b0066c7a9ea6","480371466d1b45df88fe8b00298b84c6","8a7d8f8eaaf34cfebdcbdd705f7818f3","f7947fc7eaa348ac8a533dba2dbb1460","eb24c2dd93e743fe80b79197d50c6cfd","ca5b70196c2b4fd6a30619143ccab3b6","0c8c81b9e50c4554b101f294f7970328","287ba004cadd42dfbadba91ceae55f35","2a68e8272f424df59a6b48ed687d0ffb","ad5f86e7bcc0489ca00c4eb5f9f08b1b","ae3e558145764d24ba64ddbebaddf3cf","d3fcc763987743a5bcf7392ba903a124","29e372d353dd48f8a50880d103ca53ab","bde49ae21a524697bec63f1051151ebe","df915da87ae34fd19cbbcdcca853c1b9","305c048b11204a1196369c254c3ce18c","41a6a20405e44c0b944c44cd233ed367","ac69a116a08c4c79a5f1e01e5fa51099","4519e7e00c5f419fa5911e485cb7b4c1","acaff0a1fc144e5c8da151a0a74f8a89","7ef45ff39ff3459da45f3ae4ffade6de","a95d164407a74b5a8688c56524f6ad5b","7f771063a176463c9f48ea79beab600d","272b89eaa41c42498a7cccde7f4cc561","977fa6528dbd4a8c83df555d18db0115","095bc0cee26d410fbe1fe754805f4d49","0355cf6cfa894eb0a4cee783a5464b8a","02cc7bbca7634033a46d9428ac0c521a","6e02e0b9bd3b40a08b1e9bf57d9d8208","8bc6ab295cb34b28a8d5b5b25aa2bbf3","e5958a3bc99344e5bc2bc35b1d078e5b","68e93130211647e28cc65e04043a72f4","2f7b6e9733bc4c11b52298a6bd73a6fa","217035de13054067a72cfabf88575e52","d0060f3ff7ef408c98144689619da38e","a7d8cf5cf39c49c6994fc24bc41035fb","f3a633b813ba47cfbbe3f69b36345de0","d88402dda0d84b6b8048cd8f3577ed72","53dad66ad0064a2bae9fba0698f2befa","7c0554cc57aa4d64b0a6a359202053d0","2e4583fa43a740eb94af2b4289d77ebc","7f95860d600d43d0b1cd76fadd4661b4","dadb9127dadb4919a33667d880e1e028","40f258bcd98d4c17a8fb3103b63c4de5","4c7b28ccef6345169006d8dedaf1676a","c2599058fcb7421ebd483de38cafd0de","287b33d9b5b9405fb7b00d1eb688d1e9","07ade469992a4c3ea994efb58488faa5","f445897695f740418fad120c06ebb40a","6bcc7461d5cb4ba58cc8f03837881ad8","8fd186a216124534994e6efbc7d9cb9b","047601fde0e84dc9a6f2e8c5568214b9","e2cf7c45f01143d1a0ec9db3e344be7f","d99e5767c41e4ce0bb4dfc3a33832b15","2273b75173fc4535aeaee3f92c310a7d","732e5ceb582d41e6b1e49f24a6bac72c","b92b993147024b6090c0703aa182af29","b87be7b8e26243c5812b2d4f4620bc56","07a0b179195149b7837a473fde56455c","a6673467ca7447b9bae494e17123a4dc","b86ed7e2e65947e09f7b9fa6add5fb0c","b020d4eac10741a5a580b36ad4172e85","b5ce7f6b8130402b982c580041dbc1fa","76b6e85234fd4bb4a8bf11ee865849d7","a051842014ab4a39a4ab1639f0fc15d0","21ca89311e4a4519a8c0ae1ec5ecf719","c879a6b80d0d4c81b85d69944cab2cd3"
+
+select count(*) from emailAccounts where (hasLiteAccount = false AND hasFullAccount = true) AND data is not null  AND (data.marketCode is null OR data.consumerType is null )  LIMIT 70 --108
+
+
+
+// EDIT THESE
+    var enableJobToPerformFixes = true;
+    var marketCode = "30206";
+    var fixMarketCode = true;
+    var fixConsumerType = true;
+    var fixChild = false;
+    var fixPet = false;
+    var fixDataBirthDate = false;
+    
+
+
+SELECT count(*)  FROM emailaccounts where preferences.terms is null AND lastUpdated > '2021-01-28T15:27:26.53Z'
+--43
+
+
+
+===========================================================================================================================================================
+
+1> If the birthDateReliability is equal to 9 the birthDate should not have value, if the birthDateReliability is between 0 and 4 the birthDate is required and should match format dqv-date
+     -Child birthDateReliability is 4 but birthDate is missing
+	 -Pet birthDateReliability is 0 but birthDate is missing
+	 -Pet birthDateReliability is missing
+	 
+2>  should have required property 'applicationInternalIdentifier'
+    data.child have missing applicationInternalIdentifier
+	
+	
+select count(*) from emailAccounts where data.marketCode="30206" -1743884
+
+
+Lite Account - 577867
+Full Account -1197548
+
+
+nutritionCookingLevel - 227974
+nutritionCookingFrequency - 226582
+nutritionCookingFor - 226722
+
+(data.child.birthDate is not null AND data.child.applicationInternalIdentifier is null) OR (data.pet.name is not null AND data.pet.applicationInternalIdentifier is null)
+
+DF
+--
+select  count(*) from emailAccounts where marketCode is null - 2223
+ 
+ 
+ select  count(*) from emailAccounts where consumerType is null  LIMIT 2000 - 2223
+ 
+  
+  
+  select  count(*) from emailAccounts where data.child.birthDateReliabiliy is null AND data.child.birthDate is not null - 669
+  
+  
+  
+  select  count(*) from emailAccounts where data.pet.birthDateReliabiliy is null AND data.pet.birthDate is not null -119
+   "UID": "3256058ac4df478d8047b61ca5b0dfbc","e6c0211152fc4e84b10310685fd3ffba","d489402956184889a681a3aeec69e8fb","742a93d8c7364ed6be5f6bc01d859608","f8a9b76893a142fa99182d77912a558e","e08413fef24a46eab25a556afc08a668","a4077cf0049946e9985f9e2dcf96885f","50437d7317484b2aaa3cd04d953442f1","bed58a5a4ab64e38853341d79d06f3da","a084e7a66ac043e585bc6ea6c36cd3f9"
+
+
+DF
+--
+
+function process(record, ctx, logger, next) {
+    // if(record && record.data && ((record.data.mobile &&record.data.mobile.length < 4) || (record.data.phone && record.data.phone.length < 4))) {
+    logger.info('Step 1', record);
+    var mobileOrPhoneLessThanThree = [ "52","56","+","0","477","No","57","Mia","-","1","614","NA","5",".","111","Ale","55","999","51","*","911","MX","34","3","Q","Yo","Mon","9","8","C","Lo",
+    "33","449","664","De","819","666","49","22","486","R","I","s/n","54","2",",","4","L","Ary","⁹","A","452","Zoe","W","238","O","66","M","Isa","572","656","Re","“","81","53","sn","Lia","Ño",
+    "Mi","III","Si","Kei","272","...","Va","Ana","Ola","_",",3","&/","33Q","16", "+","0","44","No","8","777","S/n","55","998","614","kk","sn","272"];
+	
+    var mobileOrPhoneGreaterThanTen =["52,999,999,999,999,900,000,000,000,000", "yonatanhm88@hotmail.com", "56CÃ³rdobaVeracruzMÃ©xico", "00000000000000000000", "Brisaguemez@gmail.com",
+    "Carpug90_@hotmail.com", "nlarraga@ucol.mx", "Optiocillumearum", "eyazmin.96@gmail.com", "osorioemmanuel_@hotmail.com", "JvsTchepito02@gmail.com", "iberojimena@gmail.com", 
+    "nickymountss@gmail.com", "8712627736y/o5551113416/5624306417", "2294139410o2292854464", "ahtziri.esca_cp@hotmail.com", "Teléfon8180173564oconLada", "8712627736y/o5551113416/5624306417", 
+    "61423480764993300", "5705142057051420", "5540574717y5584708270", "juanpablogm4185@gmail.com", "Jksalazar90@hotmail.com", "Vazqueluis96@gmail.com", "Nisiipsammollitfu",
+    "Calle7#1830colmorelos", "9141120992y9141299879", "gironlopezlenape@gmail.com", "5210444441177782", "5555555555555555", "777 ei mmui uenas a todos", "venustiano Carranza #33"];
+	
+    if(record && record.data && ((record.data.mobile && (record.data.mobile.length < 4 ) || record.data.mobile.length > 10 ) || (record.data.phone && (record.data.phone.lenght <4) || record.data.phone.lenght > 10))) {
+        logger.info('Step 2', "Step 2");
+        var newRecord = {};
+        newRecord.UID = record.UID;
+        newRecord.profile = record.profile;
+        newRecord.data = {};
+        if (record.data.mobile && record.data.mobile.length < 4) {
+            logger.info('Step 2', "Step 2");
+            newRecord.data.mobile = " ";
+        }
+        if (record.data.mobile && record.data.mobile.length > 10 ) {
+            logger.info('Step 3', "Step 3");
+            newRecord.data.mobile = " ";
+        }
+        if(record.data.phone && record.data.phone.length < 4 ) {
+            logger.info('Step 4', "Step 4");
+           newRecord.data.phone = " "; 
+        }
+        if(record.data.phone && record.data.phone.length > 10 ) {
+            logger.info('Step 5', "Step 5");
+           newRecord.data.phone = " "; 
+        }
+        newRecord.hasFullAccount = record.hasFullAccount;
+        newRecord.hasLiteAccount = record.hasLiteAccount;
+        return newRecord;
+    }    
+}
+
+
+===========================
+select count( *) from emailAccounts where data is NOT NULL  AND data.consumerType is null --78763   --74121
+select count( *) from emailAccounts  where  data is NOT NULL AND data.marketCode is null  --76077  --73573
+
+
+DF
+==
+MSCND-9610 - should have required property 'consumerType'
+MSCND-9626 - data.marketCode is missing 
+MSCND-10017 - Replace the initialAppSourceCode "FRNESQUIKSTUDIO" with "MXNESQUIKSTUDIO"
+MSCND-9863 - Phone/mobile numbers are too short/too long, has an impact on CDM >CMT propagation
+MSCND-9599 - should NOT be longer than 200 characters : profile.zip, profile.firstName
+
+
+
+
+
+
+
+
+

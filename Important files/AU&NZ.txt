@@ -1,0 +1,181 @@
+AU & NZ
+-------
+https://dsu-confluence.nestle.biz/display/DCIAM/DQV+Validations
+
+
+https://dsu-jira.nestle.biz/browse/CRMOP-1368
+
+
+https://dsu-jira.nestle.biz/browse/CDMRO-590
+
+NZaerobrand_RGaero - 
+
+select UID from emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL 
+AND lastUpdated >= '1970-01-01T00:00:00.00Z' AND preferences.terms.NZaerobrand_RGaero.isConsentGranted = true
+
+
+NZnescafe_RGprivacypolicy -
+select * from emailaccounts where UID in ("7cab2dfb5bd24f67b34d6b06e614423c", "f8d1f44cc27e42478f3454c2c76b0293",
+ "0d4bf25ff5b14dcd9a6513d0ffbeb15c", "f909aa7920894c63b2a2ceb942e4be75")
+ 
+ 
+ 
+ https://dsu-jira.nestle.biz/browse/CRMOP-179
+ 
+ https://dsu-jira.nestle.biz/browse/CRMOP-2095  --Create additional UC for Mulesoft
+ 
+ https://nestle.sharepoint.com/:x:/r/teams/OceaniaCDM/_layouts/15/guestaccess.aspx?e=4%3AeW7ZwK&at=9&share=EUchF45lajlIrFnS66xofD8BFupdgiaZx0wmppBGHQsJoA
+
+Query
+-----
+SELECT count(*)  FROM emailaccounts where preferences.terms is null AND subscriptions is not null AND subscriptions = regex("NZ.*_RG.*") 
+
+SELECT count(*),  initialAppSourceCode FROM emailaccounts where preferences.terms is null GROUP BY initialAppSourceCode 
+{
+  "callId": "be180152952145d38f1c159968a5dfab",
+  "errorCode": 0,
+  "apiVersion": 2,
+  "statusCode": 200,
+  "statusReason": "OK",
+  "time": "2020-08-18T06:33:24.309Z",
+  "results": [
+    {
+      "initialAppSourceCode": "NZSIMPLICITY_MIG",
+      "count(*)": 170425
+    },
+    {
+      "initialAppSourceCode": "NZCHOOSEWELLWEB",
+      "count(*)": 1784
+    },
+    {
+      "initialAppSourceCode": "NZMILOAPP",
+      "count(*)": 261
+    },
+    {
+      "initialAppSourceCode": "NZMILOWEB",
+      "count(*)": 192
+    },
+    {
+      "initialAppSourceCode": "NZPURINAONEWEB",
+      "count(*)": 152
+    },
+    {
+      "initialAppSourceCode": "NZMILO_WEB_BRAND",
+      "count(*)": 130
+    },
+    {
+      "initialAppSourceCode": "NZBAKERSCORNERWEB",
+      "count(*)": 119
+    },
+    {
+      "initialAppSourceCode": "NZPURINAWEB",
+      "count(*)": 49
+    },
+    {
+      "initialAppSourceCode": "NZMAGGIWEB",
+      "count(*)": 22
+    },
+    {
+      "initialAppSourceCode": "NZHEALTHYKIDSWEB",
+      "count(*)": 21
+    }
+  ],
+  "objectsCount": 10,
+  "totalCount": 178981,
+  "missing": 5826
+}
+
+Regex
+----
+
+SELECT count(*),  initialAppSourceCode FROM emailaccounts where preferences.terms is null AND initialAppSourceCode = regex("NZ.*APP")  GROUP BY initialAppSourceCode 
+
+{
+  "callId": "eef3dd62c72741cbb0a3f2affa5fdd59",
+  "errorCode": 0,
+  "apiVersion": 2,
+  "statusCode": 200,
+  "statusReason": "OK",
+  "time": "2020-08-18T06:37:00.476Z",
+  "results": [
+    {
+      "initialAppSourceCode": "NZMILOAPP",
+      "count(*)": 261
+    }
+  ],
+  "objectsCount": 1,
+  "totalCount": 261
+}
+
+SELECT count(*),  initialAppSourceCode FROM emailaccounts where preferences.terms is null AND initialAppSourceCode = regex("NZ.*_MI.*")  GROUP BY initialAppSourceCode 
+{
+  "callId": "4a934efbf2cd49208c81246f3076dcb0",
+  "errorCode": 0,
+  "apiVersion": 2,
+  "statusCode": 200,
+  "statusReason": "OK",
+  "time": "2020-08-18T06:41:46.587Z",
+  "results": [
+    {
+      "initialAppSourceCode": "NZSIMPLICITY_MIG",
+      "count(*)": 170425
+    }
+  ],
+  "objectsCount": 1,
+  "totalCount": 170425
+}
+===========
+select subscriptions.NZaerobrand_RGaero.email.isSubscribed from emailaccounts group by subscriptions.NZaerobrand_RGaero.email.isSubscribed
+=============
+
+subscriptions.NZchooswell_RGchoosewell.email.isSubscribed,
+subscriptions.NZnestlegrp_RGnestle.email.isSubscribed,
+subscriptions.NZcorporate_RGcorporate.email.isSubscribed,
+subscriptions.NZhealthykd_RGhealthykids.email.isSubscribed,
+subscriptions.NZcsb_brand_RGcsb.email.isSubscribed,
+subscriptions.NZmaggibrnd_RGmaggi.email.isSubscribed,
+subscriptions.NZnscfblbrd_RGnescafeblend43.email.isSubscribed,
+subscriptions.NZnscfgldbd_RGnescafegold.email.isSubscribed,
+subscriptions.NZntuxbrand_RGtux.email.isSubscribed,
+subscriptions.NZfriskibrd_RGfriskies.email.isSubscribed,
+subscriptions.NZmilobrand_RGchampsquad.email.isSubscribed
+
+
+Select subscriptions.NZchooswell_RGchoosewell.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZchooswell_RGchoosewell.email.isSubscribed 
+Select subscriptions.NZnestlegrp_RGnestle.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZnestlegrp_RGnestle.email.isSubscribed
+Select subscriptions.NZcorporate_RGcorporate.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZcorporate_RGcorporate.email.isSubscribed
+Select subscriptions.NZhealthykd_RGhealthykids.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZhealthykd_RGhealthykids.email.isSubscribed
+Select subscriptions.NZcsb_brand_RGcsb.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZcsb_brand_RGcsb.email.isSubscribed
+Select subscriptions.NZmaggibrnd_RGmaggi.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZmaggibrnd_RGmaggi.email.isSubscribed
+Select subscriptions.NZnscfblbrd_RGnescafeblend43.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZnscfblbrd_RGnescafeblend43.email.isSubscribed
+Select subscriptions.NZnscfgldbd_RGnescafegold.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZnscfgldbd_RGnescafegold.email.isSubscribed
+Select subscriptions.NZntuxbrand_RGtux.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZntuxbrand_RGtux.email.isSubscribed
+Select subscriptions.NZfriskibrd_RGfriskies.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZfriskibrd_RGfriskies.email.isSubscribed
+Select subscriptions.NZmilobrand_RGchampsquad.email.isSubscribed from emailaccounts where preferences.terms is null group by subscriptions.NZmilobrand_RGchampsquad.email.isSubscribed
+
+====================================
+08/31
+------------
+https://dsu-jira.nestle.biz/browse/MSECDM-1250
+
+https://dsu-jira.nestle.biz/browse/CDMRO-735 --date time issue
+
+
+=====================================================================
+01/21
+-----
+SELECT count(*) FROM emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL 
+--2607380
+
+SELECT count(*) FROM emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND  initialAppSourceCode = regex("AU.*_MI.*")
+--1693641
+
+SELECT count(*),  initialAppSourceCode FROM emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL GROUP BY initialAppSourceCode LIMIT 2000
+
+------------
+I think it s worth mentioning the points discuss in yesterday's call. 
+We have following filters:-
+   Only migrated consumer
+   Got migrated or updated after initial data load
+   
+   lastUpdated >= "2020-02-07T00:00:00.000Z" 

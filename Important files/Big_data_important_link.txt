@@ -1,0 +1,47 @@
+AWS Big Data
+============
+Valume
+Velocity 
+Veriety
+
+
+
+
+
+
+
+
+Important Link
+--------------
+Jayashree Ramesh (Organizer)to Everyone
+https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html
+https://aws.amazon.com/emr/details/hadoop/what-is-hadoop/
+https://hive.apache.org/
+http://pig.apache.org/docs/r0.17.0/start.html
+https://pig.apache.org/docs/r0.17.0/basic.html
+
+https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
+
+https://pig.apache.org/docs/r0.15.0/basic.html#join-inner
+Q:
+metastore
+A:
+AWS Artifact provides on-demand downloads of AWS security and compliance documents, such as AWS ISO certifications, Payment Card Industry (PCI), and Service Organization Control (SOC) reports. You can submit the security and compliance documents (also known as audit artifacts) to your auditors or regulators to demonstrate the security and compliance of the AWS infrastructure and services that you use. You can also use these documents as guidelines to evaluate your own cloud architecture and assess the effectiveness of your company's internal controls. AWS Artifact provides documents about AWS only. AWS customers are responsible for developing or obtaining documents that demonstrate the security and compliance of their companies.
+10:00 AM
+
+
+ayashree Ramesh (Organizer)to Everyone
+Session isn't being recorded. You may use the following free digital training for reviewing the session: AWS Hadoop Fundamentals. - https://www.aws.training/Details/eLearning?id=40337 Data Analytics Fundamentals - https://www.aws.training/Details/eLearning?id=35364
+
+Chinmay Anaokar (Organizer, Presenter)to Everyone
+https://pages.awscloud.com/traincert-twitch-power-hour-architecting.html
+
+public 10:13 AM
+Chinmay Anaokar (Organizer, Presenter)to Everyone
+https://pages.awscloud.com/GLOBAL_TRAINCERT_takethechallenge.html
+
+public 10:13 AM
+Chinmay Anaokar (Organizer, Presenter)to Everyone
+https://linkedin.com/in/canaokar
+
+

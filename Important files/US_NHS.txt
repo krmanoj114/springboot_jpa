@@ -1,0 +1,5 @@
+
+US_NHS
+------
+SELECT count(*) FROM emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL  AND  data.initialAppSourceCode = regex("US.*_MI.*")  AND lastUpdated >= "2019-12-09T00:00:00.000Z" AND  lastUpdated < "2021-01-22T23:59:59.000Z" LIMIT 200
+--27841

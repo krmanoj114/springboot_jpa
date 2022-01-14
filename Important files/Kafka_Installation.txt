@@ -1,0 +1,84 @@
+Kafka Instollation
+------------------
+
+Make sure you have JDK installed on your system
+
+
+Download latest apache kafka from https://kafka.apache.org/downloads
+https://www.apache.org/dyn/closer.cgi?path=/kafka/2.7.0/kafka_2.13-2.7.0.tgz
+
+1> Extract the tgz file
+2> Extract the tar file
+3> Set KAFKA_HOME in enronment veriable
+
+
+Start Zookeeper
+---------------
+1> Move to kafka home directory
+2> Update zookeeper.properties file
+	# the directory where the snapshot is stored.
+	#dataDir=/tmp/zookeeper
+	dataDir=C://Manoj/Kafka/kafka_2.13-2.7.0/logs
+	# the port at which the clients will connect
+	clientPort=2181
+	# disable the per-ip limit on the number of connections since this is a non-production config
+	maxClientCnxns=0
+	# Disable the adminserver by default to avoid port conflicts.
+	# Set the port to something non-conflicting if choosing to enable this
+	admin.enableServer=false
+	# admin.serverPort=8080
+3> C:\Manoj\Kafka\kafka_2.13-2.7.0\bin\windows>zookeeper-server-start.bat ..\..\config\zookeeper.properties
+
+
+Start broker server
+-------------------
+1> Move to kafka home directory
+2> Update server.properties
+		port=9092
+		log.dirs=C://Manoj/Kafka/kafka_2.13-2.7.0/logs/kafka-logs
+		
+3> C:\Manoj\Kafka\kafka_2.13-2.7.0\bin\windows>kafka-server-start.bat ../../config/server.properties
+    
+
+Command to create the topic "Mykafka-test"
+-----------------------------------------
+C:\Manoj\Kafka\kafka_2.13-2.7.0\bin\windows>kafka-topics.bat --create --topic quickstart-events --bootstrap-server localhost:9092
+
+
+Command to see  topic
+----------------------------
+C:\Manoj\Kafka\kafka_2.13-2.7.0\bin\windows>kafka-topics.bat --describe --topic quickstart-events --bootstrap-server localhost:9092
+
+
+Create Consumer
+---------------
+C:\Manoj\Kafka\kafka_2.13-2.7.0\bin\windows>kafka-console-consumer.bat --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+
+OR
+
+C:\Manoj\Kafka\kafka_2.13-2.7.0\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic streams-wordcount-output --from-beginning   --formatter kafka.tools.DefaultMessageFormatter     --property print.key=true  --property print.value=true  --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer    --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+
+
+Create Producer
+---------------
+C:\Manoj\Kafka\kafka_2.13-2.7.0\bin\windows>kafka-console-producer.bat --topic quickstart-events --bootstrap-server localhost:9092
+> produce messages, it will reflect in consumer console.
+
+
+
+Create Maven Project
+--------------------
+
+Kafka Streams Maven Archetype for creating a Streams project structure with the following commands:-
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.kafka -DarchetypeArtifactId=streams-quickstart-java -DarchetypeVersion=2.7.0          -DgroupId=streams.examples -DartifactId=streams.examples -Dversion=0.1 -Dpackage=myapps
+
+
+If you already have the Kafka broker up and running at localhost:9092, and the topics streams-plaintext-input and streams-pipe-output created on that broker, you can run this code in your IDE or on the command line, using Maven:
+
+    > mvn clean package
+    > mvn exec:java -Dexec.mainClass=myapps.Pipe
+	
+
+To get the message through consumer
+

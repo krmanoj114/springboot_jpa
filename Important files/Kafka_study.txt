@@ -1,0 +1,46 @@
+Apache Kafka
+============
+Apache Kafka - Apache Kafka is highly scalable and distributed platform for creating and processing stream in real time.
+It is used for:- 
+			Creating real time data stream
+			Processing real time data stream
+			
+How kafka works:-
+Kafka works as a pub-sub messaging system, where we create producer applications to send data as stream we install and configure kafka server as a message broker and finally we create the consumer applications to process data in realtime.
+
+Kafka was initial introduced with
+		1>Server software -Brocker -- centeral server system
+		2>Client API- Java Library
+				a)Producer API  -- Producer
+				b)Consumer API   -- Consumer
+Later they introduced as full flex streaming platform and they augmented:-
+		1>Kafka Connect   -- addrees the data integration
+		2>Kafka Stream    -- creating realt time stream
+		3>KSQL 
+
+Core Concept:--
+1>Producer - produce the messages
+2>Consumer - consume the message
+3>Broker  -  Centeral server system
+4>Cluster   - Group of centeral server system
+5>Topic    - Topic is an arbitrary name given to data set or unique name for data stream, creating a topic is design time desison. publisher and
+             consumer send and received data by topic, all communication happen throgh brocker  
+6>Partitions  - A small and independent portion of topic is called topic partition. partition in a topic in design desison, while creating the topic need to specify the number of partition. partition is a smallest unit and its going to sit on a single mechine. one can not break again.
+7>Partition Offset -is a unique sequence id of a message in the partition. sequence id is automatically assigned by brockeer on arrival, offset id are local
+8>Consumer Groups - is a group of consumer to share the load. 
+
+what is kafka connect - is a system which can be placed in between you data source and kafka sserver. which read data from data base and send it to brocker. these are two type:-
+		1> Source Connecter - 
+		2> Sink connecter  -  
+
+Kafka Streams :- Kafka streams is a library for building application and microservices, where input data is streamed into kafka topic.
+
+What is KSQL - is an sql interface to kafaka stream.
+9650108028-Jaspal
+
+		
+		
+
+			
+					
+                

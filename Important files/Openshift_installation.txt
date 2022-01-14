@@ -1,0 +1,47 @@
+
+
+Openshift Installation
+----------------------
+https://www.virtualbox.org
+
+https://github.com/minishift/minishift/releases
+
+
+
+#C:\Nestle\minishift-1.34.3-windows-amd64>minishift.exe start --vm-driver virtualbox
+
+
+
+
+To determine whether the Hyper-V hypervisor is running, follow these steps:
+---------------------------------------------------------------------------
+
+	In the search box, type msinfo32.exe.
+
+	Select System Information.
+
+	In the detail window, locate the following entry:
+
+	A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+	
+	
+Disable Hyper-V in Control Panel
+--------------------------------
+	To disable Hyper-V in Control Panel, follow these steps:
+
+	In Control Panel, select Programs and Features.
+
+	Select Turn Windows features on or off.
+
+	Expand Hyper-V, expand Hyper-V Platform, and then clear the Hyper-V Hypervisor check box.
+	
+	
+	
+	
+	
+	
+	
+	
+	https://learning.oreilly.com/videos/software-architecture-fundamentals/9781491998991/9781491998991-video317005/
+	https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/
+	https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/

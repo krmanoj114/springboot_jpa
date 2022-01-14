@@ -1,0 +1,118 @@
+
+
+MicroServices - MicroServices is a small autonomous service that work together. do one thing, one thing well
+
+What are advantages of microservices?
+-Orgnisational alignment - Microservices allow to allign the architechure to organization and orgnization to architechure
+-Release functionality faster
+-Independent scalling
+-Easier to focus on security concerns
+-Adopt technology faster
+-Embrace uncertanityin digital
+
+What are disadvantage of MicroServices?
+-Many many more options available, some see as benifit, some see it as challanges
+-Takes time to get the benifit of microservices
+-Testing is more complex
+-Monotoring is more complex, understating if there is a problem, where that problem is diffcult, requires more tools and working  practice
+-Resiliency is not free, yes we can build system that scale better and handle failure in a better way but only when you understand what component fails and how to react in a better way.
+-Lot more boxes to manage
+-Distributed systems are hard
+
+
+Principle of MicroServices:-
+-Modelled arround business domain
+-Calture of automation
+				-Continious Delivery
+				-API Driven machine provisioning
+				-API Driven OS configuration
+				-Custom Image Creation
+				-Platforms
+				-Declarative Environment Provisioning
+				-Automated Testing
+				
+				Tools:- 
+					(Ansible, CHEF, puppet lab)- software provisioning, configuration management, and application-deployment tool enabling infrastructure as code. Creates identical environment.
+
+					Packer - Packer is a tool for creation of machine and container images for multiple platform from single source configuration
+					TeraForm - 
+				
+-Hide implementation details
+				-Bounded Context
+				-Hide Your Database
+				-Think About The Protocols
+				-Be Careful of Client Libreries
+				
+-Decentralize all the things
+				- Self Service
+				-Owner Operator
+				-Internal Open Source
+				- Beware Smart Muddleware
+				-Orchestration VS Choreographu
+				
+				
+-Deploy independently
+				-One Service per OS
+				-Consumer driven Contracts
+				-Co-Existing Service Version
+				-Multiple Endpoints
+-Customer first
+				-Conversation
+				-Consumer Driven Contacts
+				-Actionable Standards
+				-API Documentation
+				-Service Discovery
+				-Humane Registry
+				
+				-
+-Isolate feature
+				- Microservices are not reliable by default
+				- Cascading Failure Can Hurt
+				- Timeouts
+				- Bulkheads
+				- Circuit Breaker
+				
+-Highly observable
+
+
+				Docker stats, collectd, nsclient++
+				Kibanna, grafite, new Relic- 	
+				Histrix 
+
+When to use microservices?
+if your requirement fall under following creteria otherwise microservices is not for you
+				- Orgnaizational Alignment
+				- Release Functionality Faster
+				- Independent Scalling
+				- Easier To Focus on Security Concerns
+				- Adopt Technology Faster
+				- Embrace Uncertanity in Digital
+				
+				Following things are key points, where one's environmental maturity lavel needs to be high before implementing micro services, If you lacking on following points you are not going to adopt microservices aggesivly 
+				- Deployment Automation
+				- Test Automation
+				- Monitoring and Remediation
+				- Distributed System
+				
+
+
+(Ansible, CHEF, puppet lab)- software provisioning, configuration management, and application-deployment tool enabling infrastructure as code. Creates identical environment.
+
+Packer - Packer is a tool for creation of machine and container images for multiple platform from single source configuration
+TeraForm - 
+
+Swagger - Metadat for API documentation
+
+Grafana - (Visualization Tool) Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources
+
+Prometheus - Time Serise DataBase
+Loki - 
+
+
+Securing Microservices :- Protect Sensetive Data in transit and at rest
+
+
+
+
+
+

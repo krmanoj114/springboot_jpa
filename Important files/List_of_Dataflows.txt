@@ -1,0 +1,54 @@
+[LITE ACCOUNTS] - Import from DQV (BLOB STORAGE)
+[FULL ACCOUNTS] - Import from DQV (BLOB STORAGE)
+[CDM] - Fix pet/child applicationInternalIdentifier,birthDate,birthDateReliability,digitalAsset
+[CDM] Fix Subscriptions lastUpdatedTimestamp
+[CDM] Fix Subscriptions lastUpdatedTimestap [Lite Accounts]
+[CDM] Fix subscriptions isSubscribed = null
+[CDM] - Count duplicated child/pet/externalApplication
+[CDM] - Fix complex data stored as object and not array
+[CDM] - Detect and count data object
+[CDM] - Fix data.mobile/phone shorter than 4 char
+[CDM] - Fix subscriptions tags without correct key sourceApplication
+Data quality checks and fixes [Lite Accounts]
+Data quality checks and fixes [Full Accounts] - Do not run WIP
+
+[LITE ACCOUNTS] - Import from DQV
+[FULL ACCOUNTS] - Import from DQV
+[FULL ACCOUNTS] - Import DQV - PHONE NUMBER - Do not use
+[LITE ACCOUNTS] - Import from S3 to SAP CDC Merge
+[FULL ACCOUNTS] - Import from S3 to SAP CDC
+
+[LITE/FULL] Delete records from CSV - UIDs (BLOB STORAGE)
+[FULL ACCOUNTS] - Only New - Import from S3 to SAP CDC
+
+[LITE/FULL] Delete records from CSV - Email
+SFMC Consumer Export - API - Phone Number 
+Data quality checks and fixes [Full Accounts] - Do not run WIP
+[LITE ACCOUNTS] SAP-CDC export users to CSV/JSON [BLOB STORAGE]
+[FULL ACCOUNTS] SAP-CDC export users to CSV/JSON [BLOB STORAGE]
+DEPRECATED - [FULL ACCOUNTS] - Import from DQV
+DEPRECATED - [LITE ACCOUNTS] - Import from DQV
+Export Sitegroup Metrics (Child, Pet, Consumer, etc)
+SFMC Consumer Export - API - Phone Number -V3 - SR
+CMS Deletion Propagation
+[PREF CENTER] - UPDATE SUBSCRIPTIONS
+[PREF CENTER] - BUILD CSV WITH SUBSCRIPTIONS
+Data quality checks and fixes [Lite Accounts]
+[LITE ACCOUNTS] SAP-CDC export users to CSV/JSON - PROD
+[FULL ACCOUNTS] SAP-CDC export users to CSV/JSON - PROD
+SFMC Consumer Export - API - Consent - V2.3 - [OAuth2]
+SFMC Consumer Export - CSV - Consent - V2.3
+SFMC Consumer Export - API - Consent - V2.3
+Delete unregistered users
+DEPRECATED - SFMC Consumer Export - API - Consent - V2.3 - [OAuth2]
+DEPRECATED - SFMC Consumer Export - API - Consent - V2.3
+DEPRECATED - SFMC Consumer Export - CSV - Consent - V2.3
+[FULL ACCOUNTS] Generate CSV uid,email mapping from JSON - CMS Sync
+SFMC Consumer Deletion - API
+SFMC Consumer Deletion - API - [OAuth2]
+[FULL ACCOUNTS] - Migrate Subscriptions to Consent - Reading emailAccounts
+[LITE ACCOUNTS] - Migrate Subscriptions to Consent
+[LITE ACCOUNTS] Deletion
+[FULL ACCOUNTS] Deletion
+[EMAIL ACCOUNTS] Sync PROD with MIG
+[FULL ACCOUNTS] Sync PROD with MIGAudit Log to SOC - {{MARKET_ISO_CODE}} Prod</option></select>

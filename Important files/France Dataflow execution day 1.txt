@@ -1,0 +1,97 @@
+
+04/06/2021
+----------
+Select count(*) from emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND (data.addressLine3 is not null OR data.addressLine4 is not null OR data.isEmailValid=true) AND lastUpdated<"2021-04-06" 
+
+-- 1209725
+
+Select count(*) from emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND (data.addressLine3 is not null OR data.addressLine4 is not null OR data.isEmailValid=true) AND lastUpdated="2021-04-06"
+--70
+
+Select count(*) from emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND (data.addressLine3 is not null OR data.addressLine4 is not null OR data.isEmailValid=true) 
+--1209795
+
+======
+
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.isEmailValid=true 
+-- 657375
+
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.isEmailValid=true AND lastUpdated<"2021-04-06"  -- 657346
+
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.isEmailValid=true AND lastUpdated="2021-04-06" -- 29
+
+
+----
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.addressLine3 is not null 
+--315714
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.addressLine3 is not null AND lastUpdated="2021-04-06"
+--19
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.addressLine3 is not null AND lastUpdated< 2021-04-06"
+--315695
+
+---
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.addressLine4 is not null
+--176508
+
+
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.addressLine4 is not null AND lastUpdated<"2021-04-06"
+--12
+
+
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND data.addressLine4 is not null AND lastUpdated<"2021-04-06"
+
+--176495
+
+====================================================
+Select count(*) from emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND (data.addressLine3 is not null OR data.addressLine4 is not null OR data.isEmailValid=true) AND lastUpdated="2021-04-06" 
+
+-- 533958
+-- 534041
+
+
+Select count(*) from emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND (data.addressLine3 is not null OR data.addressLine4 is not null OR data.isEmailValid=true) AND lastUpdated="2021-04-06" AND hasLiteAccount=true AND hasFullAccount=false 
+
+-- 96938
+
+--96944
+
+Select count(*) from emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND (data.addressLine3 is not null OR data.addressLine4 is not null OR data.isEmailValid=true) AND lastUpdated="2021-04-06" AND hasLiteAccount=false AND hasFullAccount=true 
+
+--338640
+--338683
+
+Select count(*) from emailaccounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND (data.addressLine3 is not null OR data.addressLine4 is not null OR data.isEmailValid=true) AND lastUpdated="2021-04-06" AND hasLiteAccount=true AND hasFullAccount=true 
+
+-- 98380
+--98414
+
+
+======
+accounts
+----
+Select count(*) from accounts where UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND (data.addressLine3 is not null OR data.addressLine4 is not null OR data.isEmailValid=true) AND lastUpdated="2021-04-06" 
+--433066
+
+MIG
+---
+c3bf856e035849aebf0599d49b1592e9 - lite
+f1c51443b58141739c9a0c08c2d01efb
+
+3239e01199ff447ea5f318ba6f32d144 - full
+adf99f329d2f4941980d689e89740c1e
+
+
+UID in ("c3bf856e035849aebf0599d49b1592e9", "f1c51443b58141739c9a0c08c2d01efb", "3239e01199ff447ea5f318ba6f32d144", adf99f329d2f4941980d689e89740c1e)
+
+
+UID IS NOT NULL AND data.marketCode IS NOT NULL AND profile.email IS NOT NULL AND (data.addressLine3 is not null OR data.addressLine4 is not null OR data.isEmailValid=true)  AND lastUpdated < "2021-04-06" and UID="64a6ae2ab5e3404b9a2fae81cd732bed"
+
+
+
+2021-04-06    - 532835
+
+2021-04-07    - 285228
+
+
+
+

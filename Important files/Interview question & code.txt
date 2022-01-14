@@ -1,0 +1,166 @@
+
+Questions asked in an interview on 08/13/2021 by www.altimetrik.com 
+-------------------------------------------------------------------
+What is OOPs consept in java
+what is polymirphism
+What all are new featture of java8
+What all collection object worked upon
+when to use ArrayList and LinkList and waht is difference between both
+what is difference between list and set
+What is multi thread, When to develop multi threaded application
+what all module of spring worked upon
+what is spring Boot
+
+
+
+Java Positions (Java tech Lead)Monday, September 13 4:00 – 5:00pm   for Neugene Hydrabad
+-----------------------------------------------------------------------------------------
+1>How many type of cashing in Hybernate and how to configure
+2>Why modification in for loop throws concurrent modification exception but the same is not thrown in iterator.
+3>Find the index of first unque chracter in String "HHELLOWORLD"
+4>How to find min or max value from list using stream.
+5>
+
+
+Questions asked in Epam Interview on 22 Sep 2021
+------------------------------------------------
+1> How to optimize a class in java
+2> static keyword and its uses in java
+3> Difference between final, finally and finalize
+4> Singleton design pattern
+5> Writing the SQL query to find the second heighest age of Employee
+6> Difference between HashMAp and HashTree
+7> Difference between HashSet and TreeSet
+8> Is Iterator fail safe
+9> what is REST services
+10> Which all methods are supported by REST services
+11> What is idempotant, what all http method are idempotent
+12> How to secure REST API
+13> How to setup eclipse to debug application remotely.
+14> Write a piece of code to print hashMap values
+15> What all features introduced in Java 8
+16> Difference between Interface and Abstract class
+
+Questions asked in Value Coders on 22 Sep 2021
+----------------------------------------------
+1> How to make a class thread safe
+2> Tranaction in spring 
+3> What is the use of equal and hashcode method in java
+4> How many types of mapping in Hibenate
+5> How to implements one to one, one to many, many to one and many to many \
+
+
+Interview with UST Global 0n 15/12/2021
+---------------------------------------
+What is consumer driven contract in Microservices?
+What is CAP theorem explain?
+
+
+
+
+  
+
+
+
+
+
+
+Coding part
+-----------
+Define an int array and sort them
+
+Coding
+------
+import java.util.Arrays;
+import java.util.List;
+
+public class SortingArrayDemo<main> {
+    public static void main(String[] args) {
+        int intArray[] = {2, 5, 3, 9, 12, 0, 5};
+        //WAY_1
+        List.of(2, 5, 3, 9, 12, 0, 5).stream().sorted().forEach(x -> System.out.print(x));
+
+        //WAY_2
+        Arrays.sort(intArray);
+        System.out.println("intArray.toString() = " + Arrays.toString(intArray));
+        System.out.println("before sort " + Arrays.toString(intArray));
+
+
+        //WAY_3
+        int temp = 0;
+        for (int i = 0; i < intArray.length; i++) {
+            for (int j = i + 1; j < intArray.length; j++) {
+                if (intArray[i] > intArray[j]) {
+                    temp = intArray[i];
+                    intArray[i] = intArray[j];
+                    intArray[j] = temp;
+                }
+
+            }
+        }
+        System.out.println("after sort = " + Arrays.toString(intArray));
+
+    }
+
+}
+
+
+Question asked in Dedalus Interview: Round 1  - Noida - JAVA - Solution  on 30/08/2021
+======================================================================================
+1> design pattern adapter, fasad
+2> Difference between sql and PLSQL
+3> web application vs SOA
+4> Monolith vs Microservice
+5> functional programming vs lambda
+6> JVM memory 
+7> JVM memory changes in java8
+8> how many JVM can work on single system
+9> what is memory leak, how to detact it
+10> how to detect memory leake in microservices
+11> which database is sutable database for mission critical application
+12> 
+
+Question asked in Congnigent on 10/04
+=====================================
+1> what is SOLID design principle
+2> What is cercuit breaker design pattern
+3> What is SAGA design pattern
+4> Difference between ArrayList and LinkedList
+5> what is stream, why it was introduced in java8
+6> How to split and merge an ArrayList using stream
+7> how Hashmap works, what is new introduced in Hashmap
+8> Bean life cycle
+9> What is use of stream, how it can be used for sequential and perellal processing
+10> How to identify, if an object exist in ArrayList
+11> SS
+
+
+====================================================================
+Question asked in interview with Incedo on 10/05
+------------------------------------------------
+1>What is SOLID principle
+2>Difference between REST and Microservices
+3>What is imutable class and its uses. How to create imutable class
+4>Where which collection object is used.
+5>Use of @inject method in Hibernate
+6>
+
+
+Sql query to find n th hiegest salary
+-------------------------------------
+Note that instead of nesting for second, third, etc largest salary, we can find nth salary using general query like in MySQL: 
+
+SELECT salary 
+FROM employee 
+ORDER BY salary desc limit n-1,1 
+
+
+
+
+
+
+
+
+
+
+
