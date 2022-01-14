@@ -58,7 +58,8 @@ git branch -M main
 
 git push -u origin main
 
-
+//Subsequent push can be directly with 
+git push       //to push to remote
 
 
 
