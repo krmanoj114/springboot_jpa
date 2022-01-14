@@ -1,0 +1,54 @@
+
+
+git init  // initialize git
+
+git config -l  //to list out the configuration parameters
+
+git add .  //Add all files from current directory and sub directory to staging
+
+git add -A  //add all files irrecpective of current location to staging
+
+git rm -r --cashed .  //Remove all files from stagging
+
+git status  // to check the status
+
+git commit -m "comment"   //  Commit file to local repository
+
+git log        //To see the commit log
+$ git log
+commit 103595b9280b569fe2b424ebdf89a1ce555ae52f (HEAD -> master)
+Author: Manoj K <krmanoj114@gmail.com>
+Date:   Tue Jan 11 23:13:42 2022 +0530
+
+    intial commit
+
+git show 103595b9280b569fe2b424ebdf89a1ce555ae52f
+
+git restore <filename>  // to revert the changes
+
+
+
+Branch
+------
+git branch   // to see the list of branch
+
+git branch -r  //to list the branch
+git branch -a  // to list the all branch
+
+git branch new-branch  //to create new ranch
+
+git checkout new-branch  //change branch
+
+git checkout -b new-branch  // shortcut create and switch to new branch
+
+git checkout -     //switch out to previous branch
+
+git checkout -d new-branch   // to delete new-branch
+
+Merge branch
+------------
+git merge new-utility
+
+
+
+
