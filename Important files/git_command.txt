@@ -50,5 +50,17 @@ Merge branch
 git merge new-utility
 
 
+To push the code to remote
+==========================
+git remote add origin https://github.com/krmanoj114/springboot_jpa.git
+
+git branch -M main
+
+git push -u origin main
+
+
+
+
+
 
 
